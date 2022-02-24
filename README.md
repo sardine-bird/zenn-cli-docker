@@ -1,14 +1,15 @@
 # zenn-cli-docker
 zenn-cliをdocker上で使うためのリポジトリ
 ## 初期設定
-1. [GitHubリポジトリでZennのコンテンツを管理する](https://zenn.dev/zenn/articles/connect-to-github)に従って、GitHubリポジトリとZennを連携する。
-1. このリポジトリをcloneして、Zennと連携させるリポジトリの名前(<zenn-repo>)に変更する
+### GithubとZennの連携
+[GitHubリポジトリでZennのコンテンツを管理する](https://zenn.dev/zenn/articles/connect-to-github)に従って、GitHubリポジトリとZennを連携する
+### リポジトリをcloneして、Zennと連携させるリポジトリの名前(`<zenn-repo>`)に変更する
 ```
 $ git clone git@github.com:sardine-bird/zenn-cli-docker.git
 $ mv zenn-cli-docker <zenn-repo>
 $ cd <zenn-repo>
 ```
-1.  <zenn-repo>をGitHubと連携させる
+### `<zenn-repo>`をGitHubと連携する
 ```
 $ git init
 $ git add .
@@ -16,11 +17,12 @@ $ git commit -m 'first commit'
 $ git branch -M main
 $ git remote add origin git@github.com:<user>/<zenn-repo>.git
 ```
-1. zenn-cliの初期設定 参考：[Zenn CLIをインストールする](https://zenn.dev/zenn/articles/install-zenn-cli)
+### zenn-cliの初期設定
+参考：[Zenn CLIをインストールする](https://zenn.dev/zenn/articles/install-zenn-cli)
 ```
 $ docker-compose run web npx zenn init
 ```
-1. GitHubにpushする
+### GitHubにpush
 ```
 $ git push -u origin main
 ```
